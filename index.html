@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>每天一句上海话</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar" aria-label="应用标题">
+        <div>
+          <p class="kicker">每天一句上海话</p>
+          <h1>今朝学一句，明朝就会讲。</h1>
+        </div>
+        <div class="streak" aria-label="学习统计">
+          <span id="knownCount">0</span>
+          <small>已会</small>
+        </div>
+      </header>
+
+      <main>
+        <section class="today-panel" aria-labelledby="todayTitle">
+          <div class="phrase-meta">
+            <span id="todayDate"></span>
+            <span id="todayVibe"></span>
+          </div>
+
+          <div class="phrase-header">
+            <h2 id="todayTitle"></h2>
+            <button class="icon-button primary" id="playNormal" type="button" aria-label="播放句子">
+              <span aria-hidden="true">▶</span>
+            </button>
+          </div>
+
+          <p class="pronunciation" id="todayPronunciation"></p>
+          <p class="meaning" id="todayMandarin"></p>
+          <p class="english" id="todayEnglish"></p>
+
+          <div class="action-row" aria-label="学习操作">
+            <button id="playSlow" type="button">慢速听</button>
+            <button id="startPractice" type="button">测一测</button>
+            <button id="toggleKnown" type="button">我会了</button>
+            <button id="toggleFavorite" type="button">收藏</button>
+          </div>
+
+          <section class="practice-inline" aria-labelledby="practiceTitle">
+            <div class="section-heading">
+              <h3 id="practiceTitle">听懂了吗</h3>
+              <span id="practiceResult" aria-live="polite"></span>
+            </div>
+            <p class="practice-prompt" id="practicePrompt">先听一句，再点“测一测”选择意思。</p>
+            <div id="practiceOptions" class="option-grid" hidden></div>
+          </section>
+
+          <div class="mini-grid">
+            <section class="info-block" aria-labelledby="usageTitle">
+              <h3 id="usageTitle">啥辰光用</h3>
+              <p id="todayUsage"></p>
+            </section>
+
+            <section class="info-block" aria-labelledby="dialogueTitle">
+              <h3 id="dialogueTitle">小对话</h3>
+              <div id="todayDialogue" class="dialogue"></div>
+            </section>
+          </div>
+        </section>
+
+        <section class="breakdown-panel" aria-labelledby="breakdownTitle">
+          <div class="section-heading">
+            <h2 id="breakdownTitle">拆开来讲</h2>
+            <button id="playWords" type="button">逐词听</button>
+          </div>
+          <div id="breakdownList" class="breakdown-list"></div>
+        </section>
+
+        <section class="archive-panel" aria-labelledby="archiveTitle">
+          <div class="section-heading">
+            <h2 id="archiveTitle">往日句子</h2>
+            <div class="filter-tabs" role="tablist" aria-label="筛选句子">
+              <button class="active" data-filter="all" type="button">全部</button>
+              <button data-filter="known" type="button">已会</button>
+              <button data-filter="favorites" type="button">收藏</button>
+            </div>
+          </div>
+          <div id="archiveList" class="archive-list"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./app.js?v=20260705-clickable-answers" defer></script>
+  </body>
+</html>
