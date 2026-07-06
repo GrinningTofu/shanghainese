@@ -1,5 +1,229 @@
 const phrases = [
   {
+    id: "2026-07-05-xintiao",
+    date: "2026-07-05",
+    shanghainese: "今朝这场球，看得我心跳快得来。",
+    mandarin: "今天这场球看得我心跳都加快了。",
+    english: "This match today had my heart racing.",
+    pronunciation: "jin-zau zeh zaon qiu, kheh teh ngu xin-tiau khua teh le",
+    audio: {
+      normal: "audio/seed-vc/2026-07-05-xintiao.wav"
+    },
+    vibe: "世界杯 / 紧张",
+    usage: "看一场节奏很快、悬念很足的比赛时用，适合赛后和朋友讲观感。",
+    answer: "今天这场球看得我心跳都加快了。",
+    options: ["今天这场球看得我心跳都加快了。", "今天这场球踢得很无聊。", "今天这场球已经取消了。"],
+    breakdown: [
+      { word: "今朝", meaning: "今天" },
+      { word: "这场球", meaning: "这场比赛" },
+      { word: "心跳", meaning: "心跳" },
+      { word: "快得来", meaning: "快起来、变得很快" }
+    ],
+    dialogue: [
+      ["A", "最后十分钟侬还看得下去伐？"],
+      ["B", "今朝这场球，看得我心跳快得来。"]
+    ]
+  },
+  {
+    id: "2026-07-06-jiaofa",
+    date: "2026-07-06",
+    shanghainese: "伊脚法老灵个，后卫根本拦勿牢。",
+    mandarin: "他的脚法太厉害了，后卫根本拦不住。",
+    english: "His footwork is so good the defenders just cannot stop him.",
+    pronunciation: "yi jiao-fah lau ling geh, heu-wei ken-pen lan veh lau",
+    audio: {
+      normal: "audio/seed-vc/2026-07-06-jiaofa.wav"
+    },
+    vibe: "世界杯 / 夸球员",
+    usage: "夸球员控球、过人、传射很漂亮时用，带一点球迷聊天的兴奋感。",
+    answer: "他的脚法太厉害了，后卫根本拦不住。",
+    options: ["他的脚法太厉害了，后卫根本拦不住。", "他的球鞋今天不合脚。", "他的体力已经完全不够了。"],
+    breakdown: [
+      { word: "伊", meaning: "他" },
+      { word: "脚法", meaning: "控球、传球、射门的技术" },
+      { word: "老灵", meaning: "很厉害、很漂亮" },
+      { word: "拦勿牢", meaning: "拦不住" }
+    ],
+    dialogue: [
+      ["A", "刚刚这记过人看清爽伐？"],
+      ["B", "伊脚法老灵个，后卫根本拦勿牢。"]
+    ]
+  },
+  {
+    id: "2026-07-07-shijiebo",
+    date: "2026-07-07",
+    shanghainese: "这记世界波，真叫人看得发呆。",
+    mandarin: "这个远射进球太精彩了。",
+    english: "That long-range goal was absolutely stunning.",
+    pronunciation: "zeh ji sy-jie-bo, zen jiau gnin kheh teh fah nge",
+    audio: {
+      normal: "audio/seed-vc/2026-07-07-shijiebo.wav"
+    },
+    vibe: "世界杯 / 进球",
+    usage: "看到远射、凌空抽射、神仙球时用，强调漂亮到让人愣住。",
+    answer: "这个远射进球太精彩了。",
+    options: ["这个远射进球太精彩了。", "这个传球太普通了。", "这个球根本没有进。"],
+    breakdown: [
+      { word: "这记", meaning: "这一下、这一脚" },
+      { word: "世界波", meaning: "非常精彩的远射进球" },
+      { word: "真叫人", meaning: "真的让人" },
+      { word: "发呆", meaning: "看愣住" }
+    ],
+    dialogue: [
+      ["A", "这球从那么远地方打进去？"],
+      ["B", "这记世界波，真叫人看得发呆。"]
+    ]
+  },
+  {
+    id: "2026-07-08-dianqiudazhan",
+    date: "2026-07-08",
+    shanghainese: "点球大战最要命，侬讲紧张伐？",
+    mandarin: "点球大战最刺激，太紧张了。",
+    english: "Penalty shootouts are the most nerve-racking. So tense, right?",
+    pronunciation: "di-yoe da-zan zue yau-ming, nong gong jin-zaon va",
+    audio: {
+      normal: "audio/seed-vc/2026-07-08-dianqiudazhan.wav"
+    },
+    vibe: "世界杯 / 点球",
+    usage: "比赛拖到点球大战时用，表达又刺激又有点受不了的紧张。",
+    answer: "点球大战最刺激，太紧张了。",
+    options: ["点球大战最刺激，太紧张了。", "点球大战一点都不重要。", "点球大战已经提前结束了。"],
+    breakdown: [
+      { word: "点球大战", meaning: "点球决胜" },
+      { word: "最要命", meaning: "最让人受不了、最刺激" },
+      { word: "侬讲", meaning: "你说" },
+      { word: "紧张伐", meaning: "紧张吗" }
+    ],
+    dialogue: [
+      ["A", "又要踢点球了。"],
+      ["B", "点球大战最要命，侬讲紧张伐？"]
+    ]
+  },
+  {
+    id: "2026-07-09-qiangdiao",
+    date: "2026-07-09",
+    shanghainese: "这帮小囡踢得蛮有腔调个。",
+    mandarin: "这群年轻球员踢得很有风格。",
+    english: "These young players have real style on the pitch.",
+    pronunciation: "zeh bang xiau-noe thi teh man yoe qiang-diau geh",
+    audio: {
+      normal: "audio/seed-vc/2026-07-09-qiangdiao.wav"
+    },
+    vibe: "世界杯 / 新星",
+    usage: "夸年轻球员不怯场、踢得有风格有自信时用。",
+    answer: "这群年轻球员踢得很有风格。",
+    options: ["这群年轻球员踢得很有风格。", "这群年轻球员今天没有上场。", "这群年轻球员都坐错车了。"],
+    breakdown: [
+      { word: "这帮", meaning: "这群" },
+      { word: "小囡", meaning: "年轻人、小孩" },
+      { word: "蛮", meaning: "挺、很" },
+      { word: "有腔调", meaning: "有风格、有派头" }
+    ],
+    dialogue: [
+      ["A", "这队平均年纪蛮小个。"],
+      ["B", "这帮小囡踢得蛮有腔调个。"]
+    ]
+  },
+  {
+    id: "2026-07-10-bushi",
+    date: "2026-07-10",
+    shanghainese: "补时进球，整只酒吧才叫炸脱了。",
+    mandarin: "补时进球让整个酒吧都沸腾了。",
+    english: "That stoppage-time goal made the whole bar erupt.",
+    pronunciation: "bu-zy jin-qiu, zen zeq jiu-ba ze jiau zah theq le",
+    audio: {
+      normal: "audio/seed-vc/2026-07-10-bushi.wav"
+    },
+    vibe: "世界杯 / 绝杀",
+    usage: "补时、读秒、最后一刻进球时用，语气很适合现场看球后的兴奋。",
+    answer: "补时进球让整个酒吧都沸腾了。",
+    options: ["补时进球让整个酒吧都沸腾了。", "补时进球让大家都回家了。", "补时进球其实没有人看到。"],
+    breakdown: [
+      { word: "补时", meaning: "伤停补时" },
+      { word: "进球", meaning: "进球" },
+      { word: "整只酒吧", meaning: "整个酒吧" },
+      { word: "炸脱了", meaning: "炸开了、沸腾了" }
+    ],
+    dialogue: [
+      ["A", "最后一脚进了以后现场哪能？"],
+      ["B", "补时进球，整只酒吧才叫炸脱了。"]
+    ]
+  },
+  {
+    id: "2026-07-11-xianhua",
+    date: "2026-07-11",
+    shanghainese: "裁判这记哨子，球迷要有闲话讲了。",
+    mandarin: "裁判这个判罚，球迷肯定要讨论了。",
+    english: "Fans are definitely going to talk about that whistle.",
+    pronunciation: "ze-ban zeh ji sau-zy, qiu-mi yau yoe ghe-o gong le",
+    audio: {
+      normal: "audio/seed-vc/2026-07-11-xianhua.wav"
+    },
+    vibe: "世界杯 / 判罚",
+    usage: "遇到争议判罚、VAR、越位或点球时用，适合表示这下肯定有讨论。",
+    answer: "裁判这个判罚，球迷肯定要讨论了。",
+    options: ["裁判这个判罚，球迷肯定要讨论了。", "裁判今天提前下班了。", "球迷已经完全不看比赛了。"],
+    breakdown: [
+      { word: "裁判", meaning: "裁判" },
+      { word: "这记哨子", meaning: "这次吹哨、这个判罚" },
+      { word: "球迷", meaning: "球迷" },
+      { word: "有闲话讲", meaning: "有话要说、要讨论" }
+    ],
+    dialogue: [
+      ["A", "这球到底该勿该吹？"],
+      ["B", "裁判这记哨子，球迷要有闲话讲了。"]
+    ]
+  },
+  {
+    id: "2026-07-12-laisai",
+    date: "2026-07-12",
+    shanghainese: "佛得角这位门将极其来噻。",
+    mandarin: "佛得角这位门将非常厉害。",
+    english: "Cape Verde's goalkeeper is seriously impressive.",
+    pronunciation: "fo-deh-jiau zeh wei men-jiang ji-qi le-se",
+    audio: {
+      normal: "audio/seed-vc/2026-07-12-laisai.wav"
+    },
+    vibe: "世界杯 / 门将",
+    usage: "夸门将扑救神勇、状态爆棚时用，来噻有能干、厉害、撑得住场面的感觉。",
+    answer: "佛得角这位门将非常厉害。",
+    options: ["佛得角这位门将非常厉害。", "佛得角这位门将没有上场。", "佛得角这位门将一直在进攻。"],
+    breakdown: [
+      { word: "佛得角", meaning: "Cape Verde" },
+      { word: "这位门将", meaning: "这名守门员" },
+      { word: "极其", meaning: "非常、特别" },
+      { word: "来噻", meaning: "厉害、能干、很行" }
+    ],
+    dialogue: [
+      ["A", "刚刚这记扑救救命了。"],
+      ["B", "佛得角这位门将极其来噻。"]
+    ]
+  },
+  {
+    id: "2026-07-13-muzi",
+    date: "2026-07-13",
+    shanghainese: "姆巴佩真的模子。",
+    mandarin: "姆巴佩真的很厉害、很有范儿。",
+    english: "Mbappe is genuinely class.",
+    pronunciation: "mu-ba-pei zen-deh mu-zy",
+    audio: {
+      normal: "audio/seed-vc/2026-07-13-muzi.wav"
+    },
+    vibe: "世界杯 / 球星",
+    usage: "夸球星又强又有气场时用，短短一句很像看球时脱口而出的评价。",
+    answer: "姆巴佩真的很厉害、很有范儿。",
+    options: ["姆巴佩真的很厉害、很有范儿。", "姆巴佩今天完全没睡醒。", "姆巴佩只是来看台看球。"],
+    breakdown: [
+      { word: "姆巴佩", meaning: "Mbappe" },
+      { word: "真的", meaning: "确实、真是" },
+      { word: "模子", meaning: "厉害的人、有范儿的人" }
+    ],
+    dialogue: [
+      ["A", "这一冲起来后卫追勿上。"],
+      ["B", "姆巴佩真的模子。"]
+    ]
+  },
+  {
     id: "2026-07-04-laosa",
     date: "2026-07-04",
     shanghainese: "侬今朝老飒额。",
@@ -175,9 +399,15 @@ function getTodayPhrase() {
     String(today.getMonth() + 1).padStart(2, "0"),
     String(today.getDate()).padStart(2, "0")
   ].join("-");
+  const exactPhrase = phrases.find((phrase) => phrase.date === todayKey);
+  if (exactPhrase) {
+    return exactPhrase;
+  }
+
   return (
-    phrases.find((phrase) => phrase.date === todayKey) ||
-    phrases.find((phrase) => phrase.date < todayKey) ||
+    phrases
+      .filter((phrase) => phrase.date < todayKey)
+      .sort((a, b) => b.date.localeCompare(a.date))[0] ||
     phrases[0]
   );
 }
