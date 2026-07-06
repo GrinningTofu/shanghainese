@@ -27,10 +27,10 @@ const phrases = [
   {
     id: "2026-07-06-jiaofa",
     date: "2026-07-06",
-    shanghainese: "伊脚法老灵个，后卫根本拦勿牢。",
+    shanghainese: "伊额脚法老灵个，后卫根本拦勿牢。",
     mandarin: "他的脚法太厉害了，后卫根本拦不住。",
     english: "His footwork is so good the defenders just cannot stop him.",
-    pronunciation: "yi jiao-fah lau ling geh, heu-wei ken-pen lan veh lau",
+    pronunciation: "yi eh jiao-fah lau ling geh, heu-wei ken-pen lan veh lau",
     audio: {
       normal: "audio/seed-vc/2026-07-06-jiaofa.wav"
     },
@@ -46,7 +46,7 @@ const phrases = [
     ],
     dialogue: [
       ["A", "刚刚这记过人看清爽伐？"],
-      ["B", "伊脚法老灵个，后卫根本拦勿牢。"]
+      ["B", "伊额脚法老灵个，后卫根本拦勿牢。"]
     ]
   },
   {
@@ -393,12 +393,7 @@ const elements = {
 };
 
 function getTodayPhrase() {
-  const today = new Date();
-  const todayKey = [
-    today.getFullYear(),
-    String(today.getMonth() + 1).padStart(2, "0"),
-    String(today.getDate()).padStart(2, "0")
-  ].join("-");
+  const todayKey = getTodayKey();
   const exactPhrase = phrases.find((phrase) => phrase.date === todayKey);
   if (exactPhrase) {
     return exactPhrase;
@@ -410,6 +405,20 @@ function getTodayPhrase() {
       .sort((a, b) => b.date.localeCompare(a.date))[0] ||
     phrases[0]
   );
+}
+
+function getTodayKey() {
+  const today = new Date();
+  return [
+    today.getFullYear(),
+    String(today.getMonth() + 1).padStart(2, "0"),
+    String(today.getDate()).padStart(2, "0")
+  ].join("-");
+}
+
+function availablePhrases() {
+  const todayKey = getTodayKey();
+  return phrases.filter((phrase) => phrase.date <= todayKey);
 }
 
 function loadProgress() {
@@ -600,13 +609,14 @@ function renderPractice() {
 }
 
 function filteredPhrases() {
+  const visiblePhrases = availablePhrases();
   if (activeFilter === "known") {
-    return phrases.filter((phrase) => progress.known.includes(phrase.id));
+    return visiblePhrases.filter((phrase) => progress.known.includes(phrase.id));
   }
   if (activeFilter === "favorites") {
-    return phrases.filter((phrase) => progress.favorites.includes(phrase.id));
+    return visiblePhrases.filter((phrase) => progress.favorites.includes(phrase.id));
   }
-  return phrases;
+  return visiblePhrases;
 }
 
 function renderArchive() {
