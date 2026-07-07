@@ -418,7 +418,9 @@ function getTodayKey() {
 
 function availablePhrases() {
   const todayKey = getTodayKey();
-  return phrases.filter((phrase) => phrase.date <= todayKey);
+  return phrases
+    .filter((phrase) => phrase.date <= todayKey)
+    .sort((a, b) => b.date.localeCompare(a.date));
 }
 
 function loadProgress() {
